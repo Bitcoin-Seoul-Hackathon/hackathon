@@ -3,6 +3,10 @@
 ---
 ![Untitled](https://github.com/catze-labs/autobit-world/assets/65929678/242a27ca-3e8a-4b59-99fd-0760a9cde8bd)
 
+## Pitch Deck
+
+[PitchDeck_AutoBitWorld.pdf](https://github.com/catze-labs/autobit-world/files/15445893/PitchDeck_AutoBitWorld.pdf)
+
 
 ## 1. Introduction
 
