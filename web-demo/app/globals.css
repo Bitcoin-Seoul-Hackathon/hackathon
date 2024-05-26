@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* dragging selection */
+::-moz-selection {
+  background: #60c5e844;
+}
+::selection {
+  background: #60c5e844;
+}
