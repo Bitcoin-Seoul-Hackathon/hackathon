@@ -1,8 +1,8 @@
 # Documentation (AutoBitWorld)
 
 ---
+![Untitled](https://github.com/catze-labs/autobit-world/assets/65929678/242a27ca-3e8a-4b59-99fd-0760a9cde8bd)
 
-![Untitled](Documentation%20(AutoBitWorld)%20cf3b34acb39748758dfb5a38778820a2/Untitled.png)
 
 ## 1. Introduction
 
