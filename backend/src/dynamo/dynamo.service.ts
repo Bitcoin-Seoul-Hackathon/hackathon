@@ -1,10 +1,5 @@
 import { Injectable, Logger } from '@nestjs/common';
-import {
-  BatchWriteItemCommand,
-  DynamoDBClient,
-  PutItemCommand,
-  UpdateItemCommand,
-} from '@aws-sdk/client-dynamodb';
+import { DynamoDBClient, PutItemCommand } from '@aws-sdk/client-dynamodb';
 import {
   DynamoDBDocumentClient,
   GetCommand,
@@ -12,12 +7,13 @@ import {
   UpdateCommand,
 } from '@aws-sdk/lib-dynamodb';
 import { ConfigService } from '@nestjs/config';
-import { PutItemDto } from 'src/dto/put-item.dto';
-import { RequestItemsDto } from 'src/dto/requst-items';
-import { PutRequestDto } from 'src/dto/put-request.dto';
-import { GetItemDto } from 'src/dto/get-item.dto';
-import { DynamoQueryDto } from 'src/dto/dynamo-query.dto';
+// import { PutItemDto } from 'src/dto/put-item.dto';
+// import { DynamoQueryDto } from 'src/dto/dynamo-query.dto';
 import { KeyPairDto } from 'src/dto/key-pair.dto';
+// import { DynamoUpdateDto } from 'src/dto/dynamo-update.dto';
+import { GetItemDto } from 'src/dto/get-item.dto';
+import { PutItemDto } from 'src/dto/put-item.dto';
+import { DynamoQueryDto } from 'src/dto/dynamo-query.dto';
 import { DynamoUpdateDto } from 'src/dto/dynamo-update.dto';
 
 @Injectable()
@@ -85,7 +81,8 @@ export class DynamoService {
   }
 
   async query(item: KeyPairDto): Promise<any> {
-    const queryDto = new DynamoQueryDto(this.tableName, item.PK, item.SK);
+    const queryDto = new DynamoQueryDto(this.tableName, item.PK);
+    console.log(this.tableName, item.PK);
     this.logger.log(queryDto);
     const command = new QueryCommand(queryDto);
     const response = await this.docClient.send(command);

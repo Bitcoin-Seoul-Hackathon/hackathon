@@ -1,4 +1,6 @@
 # bitcoin-alarm
+#### Register bitcoin wallet address and get transaction notification throuhg your daily life SNS app (Telegram)!
+<img width="1440" alt="image" src="https://github.com/Frenchkebab/bitcoin-alarm/assets/60724296/de06177a-d673-4676-85c7-eb32ef14d1cf">
 
 # Demo Instruction
 
@@ -20,7 +22,4 @@
 
 ## 5 Get Notification for transaction!
 
-
-### submission commit source
-- https://github.com/Frenchkebab/bitcoin-alarm/commit/97357b4f22ff6e807de376da9289d872274bed47
 

@@ -4,6 +4,10 @@ import { UserRegisterVo } from './user-register.vo';
 export class UserRegisterDto {
   @IsString()
   @IsNotEmpty()
+  pk: string;
+
+  @IsString()
+  @IsNotEmpty()
   address: string;
 
   @IsString()
@@ -12,8 +16,8 @@ export class UserRegisterDto {
 
   static fromRegisterUserVo(vo: UserRegisterVo) {
     const dto = new UserRegisterDto();
-    dto.address = vo.PK.split('#')[2];
-    dto.telegramID = vo.SK.split('#')[2];
+    dto.address = vo.SK;
+    dto.telegramID = vo.telegramID;
     return dto;
   }
 }

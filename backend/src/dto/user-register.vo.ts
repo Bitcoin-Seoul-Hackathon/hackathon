@@ -10,10 +10,15 @@ export class UserRegisterVo {
   @IsNotEmpty()
   SK: string;
 
+  @IsString()
+  @IsNotEmpty()
+  telegramID: string;
+
   static fromRegisterUserDto(dto: UserRegisterDto) {
     const vo = new UserRegisterVo();
-    vo.PK = `Address#${dto.address}`;
-    vo.SK = `TelegramID#${dto.telegramID}`;
+    vo.PK = 'user';
+    vo.SK = dto.address;
+    vo.telegramID = dto.telegramID;
     return vo;
   }
 }

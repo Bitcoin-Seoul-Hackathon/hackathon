@@ -1,9 +1,9 @@
 import { Module } from '@nestjs/common';
-import { ConfigModule } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { DynamoService } from './dynamo.service';
 
 @Module({
-  imports: [ConfigModule],
+  imports: [ConfigModule, ConfigService],
   exports: [DynamoService],
   providers: [DynamoService],
 })

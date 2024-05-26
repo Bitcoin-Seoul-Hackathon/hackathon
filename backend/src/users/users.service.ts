@@ -13,15 +13,17 @@ export class UsersService {
     const pk = userRegisterVo.PK;
     const sk = userRegisterVo.SK;
     const keyPairDto = new KeyPairDto(pk, sk);
+    console.log(keyPairDto);
     const userList = await this.dynamo.query(keyPairDto);
     console.log(userList.Items);
     return userList.Items[0];
   }
 
   async getUsers() {
-    const pk = 'Address';
+    const pk = 'user';
     const sk = 'TelegramID';
     const keyPairDto = new KeyPairDto(pk, sk);
+    console.log(keyPairDto);
     const userList = await this.dynamo.query(keyPairDto);
     console.log(userList.Items);
     return userList.Items;
